@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  opc-sim:
+    build: .
+    command: ["node", "src/plc-simulator.js"]
+    ports:
+      - "4841:4840"
+  historian:
+    build: .
+    command: ["node", "src/historian.js"]
+    depends_on:
+      - opc-sim
+    environment:
+      - OPC_ENDPOINT=opc.tcp://opc-sim:4840
+      - DB_PATH=/app/data/telemetry.db
+      - SAMPLE_WINDOW_HOURS=8
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports

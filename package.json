@@ -1,0 +1,29 @@
+{
+  "name": "data-historian",
+  "version": "1.0.0",
+  "description": "OPC-UA historian with SQLite storage and Excel reporting",
+  "main": "src/historian.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/historian.js",
+    "simulate": "node src/plc-simulator.js",
+    "report": "node src/generate_report.js",
+    "dev": "concurrently \"npm run simulate\" \"npm run start\""
+  },
+  "dependencies": {
+    "chokidar": "3.5.3",
+    "dayjs": "^1.11.11",
+    "exceljs": "^4.4.0",
+    "node-opcua": "^2.119.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "overrides": {
+    "chokidar": "3.5.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
