@@ -34,6 +34,3 @@ npm run report            # write Excel into ./reports
 - `src/historian.js` subscribes to Temperature changes, snapshots other nodes, and writes rows into SQLite with timestamps.
 - `src/generate_report.js` pulls the last 8 hours, computes average temperature and downtime, and emits a formatted Excel workbook.
 - `docs/report-template.md` + `docs/images/*` provide a portfolio-ready explainer with an architecture SVG.
-
-## Resume snippet
-> Built a background service that logs OPC-UA machine data into SQLite and automatically generates end-of-shift Excel reports (average temperature, downtime). Demonstrated bridging OT data with IT reporting using Node.js + ExcelJS.
