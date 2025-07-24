@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f1428"/>
+      <stop offset="100%" stop-color="#1a1f35"/>
+    </linearGradient>
+    <linearGradient id="card2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#161b2f"/>
+      <stop offset="100%" stop-color="#0f1324"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg2)"/>
+  <text x="60" y="70" fill="#f5f7fb" font-family="Segoe UI, sans-serif" font-size="28" font-weight="700">Factory Data Historian</text>
+  <text x="60" y="98" fill="#c7cee6" font-family="Segoe UI, sans-serif" font-size="16">OPC-UA ingest ➜ SQLite ➜ ExcelJS report</text>
+
+  <rect x="70" y="150" width="180" height="120" rx="16" fill="url(#card2)" stroke="#222a44"/>
+  <text x="100" y="190" fill="#f5f7fb" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">OPC-UA</text>
+  <text x="100" y="215" fill="#c7cee6" font-family="Segoe UI, sans-serif" font-size="12">Temperature
+PumpStatus
+CleaningCycleID
+Overheat_Alarm</text>
+
+  <rect x="320" y="150" width="190" height="120" rx="16" fill="url(#card2)" stroke="#222a44"/>
+  <text x="350" y="190" fill="#f5f7fb" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">Historian</text>
+  <text x="350" y="215" fill="#c7cee6" font-family="Segoe UI, sans-serif" font-size="12">MonitoredItem (on change)
+Snapshot pump/alarm/cycle
+QueueSize=20</text>
+
+  <rect x="570" y="150" width="170" height="120" rx="16" fill="url(#card2)" stroke="#222a44"/>
+  <text x="600" y="190" fill="#f5f7fb" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">SQLite</text>
+  <text x="600" y="215" fill="#c7cee6" font-family="Segoe UI, sans-serif" font-size="12">timestamp INTEGER
+temperature REAL
+pump_status INTEGER
+overheat INTEGER
+cycle_id INTEGER</text>
+
+  <rect x="780" y="150" width="120" height="120" rx="16" fill="url(#card2)" stroke="#222a44"/>
+  <text x="800" y="190" fill="#f5f7fb" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">ExcelJS</text>
+  <text x="800" y="215" fill="#c7cee6" font-family="Segoe UI, sans-serif" font-size="12">Shift report
+Avg Temp
+Downtime</text>
+
+  <line x1="250" y1="210" x2="320" y2="210" stroke="#2ee6a9" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="510" y1="210" x2="570" y2="210" stroke="#2ee6a9" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="740" y1="210" x2="780" y2="210" stroke="#2ee6a9" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2ee6a9" />
+    </marker>
+  </defs>
+
+  <rect x="320" y="320" width="350" height="120" rx="16" fill="url(#card2)" stroke="#222a44"/>
+  <text x="345" y="355" fill="#f5f7fb" font-family="Segoe UI, sans-serif" font-size="16" font-weight="700">KPIs in Report</text>
+  <text x="345" y="380" fill="#c7cee6" font-family="Segoe UI, sans-serif" font-size="12">- Average Temperature (last 8h)
+- Total Downtime (pump off)
+- Timeline of temperature samples</text>
+</svg>
