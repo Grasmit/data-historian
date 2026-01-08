@@ -1,4 +1,4 @@
-# Project 2: Factory Data Historian
+# Factory Data Historian
 
 Background service that subscribes to an OPC-UA machine, stores telemetry in SQLite, and generates Excel shift reports.
 
